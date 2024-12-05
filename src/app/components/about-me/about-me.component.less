@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  height: 390px;
+  width: 100%;
+  gap: 20px;
+  font-family: sans-serif;
+  // border: 1px solid black;
+
+
+  .img-wrapper {
+    // flex: 1;
+    margin: 17px;
+    display: flex;
+    align-items: center;
+    .jp-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 6px solid black;
+    }
+  }
+
+  .about-me-text {
+    display: flex;
+    font-family: sans-serif;
+    text-align: justify;
+    flex-direction: column;
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 7px;
+    }
+
+    .outline {
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke: 1px;
+    }
+
+    .outline-black {
+      -webkit-text-fill-color: black;
+      -webkit-text-stroke: 1px;
+    }
+  }
+}
+.social-media-icons {
+  display: flex;
+  justify-content: left;
+  margin-top: 7px;
+}
+

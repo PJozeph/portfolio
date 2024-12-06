@@ -1,0 +1,40 @@
+.container {
+    background-color: black;
+    color: white;
+    width: 100%;
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .card {
+            border: 1px solid white;
+            padding: 1rem;
+            border-radius: 7px;
+            .header {
+                display: flex;
+                margin-bottom: 20px;
+
+                .company-logo {
+                    flex: 1;
+                    img {
+                        border-radius: 7px;
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+
+                .title {
+                    flex: 6;
+                }
+
+                .date {
+                    flex: 1;
+                    text-align: right;
+                }
+
+            }
+        }
+    }
+}

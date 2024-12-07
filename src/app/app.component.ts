@@ -6,6 +6,7 @@ import { MyExperienceComponent } from './components/my-experience/my-experience.
 import { AboutMeMoreComponent } from './components/about-me-more/about-me-more.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { ContactComponent } from "./components/contact/contact.component";
 
 @Component({
   selector: 'app-root',
@@ -17,8 +18,9 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
     MyExperienceComponent,
     AboutMeMoreComponent,
     ProjectsComponent,
-    TestimonialComponent
-  ],
+    TestimonialComponent,
+    ContactComponent,
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.less',
 })

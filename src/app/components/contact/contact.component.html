@@ -1,1 +1,21 @@
-<p>contact works!</p>
+<section class="flex gap-6 mt-32 mb-32">
+  <form [formGroup]="contactFormGroup" class="flex flex-col gap-4">
+    <input formControlName="name" placeholder="Your name" class="p-2" />
+    <input formControlName="email" placeholder="Email" class="p-2" />
+    <input
+      formControlName="website"
+      placeholder="Your website (if exisist)"
+      class="p-2"
+    />
+    <input formControlName="message" placeholder="How can I help" class="p-2" />
+  </form>
+  <section class="flex flex-col gap-8 place-content-end items-start">
+    <div class="text-4xl">Lets's talk for Something specaial</div>
+    <div class="text-sm">
+      I seek to push the limits of creativity to create high-engaging,
+      user-friendly, and memorable interactive experiences.
+    </div>
+    <div class="font-bold">Youremailgmail.com</div>
+    <div class="font-bold" >+3630 635 4914</div>
+  </section>
+</section>

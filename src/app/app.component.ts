@@ -7,6 +7,7 @@ import { AboutMeMoreComponent } from './components/about-me-more/about-me-more.c
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { ContactComponent } from "./components/contact/contact.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,8 @@ import { ContactComponent } from "./components/contact/contact.component";
     ProjectsComponent,
     TestimonialComponent,
     ContactComponent,
+    FooterComponent,
+    FooterComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.less',

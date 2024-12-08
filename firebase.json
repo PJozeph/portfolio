@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": "dist/freelance-portfolio/browser",
+    "functions": {
+      "source": "dist/freelance-portfolio/server"
+    },
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "ssr"
+      }
+    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

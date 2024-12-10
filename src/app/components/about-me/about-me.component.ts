@@ -27,10 +27,10 @@ export class AboutMeComponent implements OnInit {
         '@type': 'Person',
         name: 'Jozsef Pallagi',
         jobTitle: 'Full Stack Developer',
-        url: 'https://your-website-url.com',
+        url: 'http://jozsefpallagi.com',
         sameAs: [
           'https://www.linkedin.com/in/jozsef-pallagi',
-          'https://github.com/jozsef-pallagi',
+          'https://github.com/PJozeph',
         ],
         worksFor: {
           '@type': 'Organization',

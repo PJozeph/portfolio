@@ -1,7 +1,9 @@
 <section class="flex flex-col md:flex-row gap-6 mt-32 mb-32 p-4">
     <form
         [formGroup]="contactFormGroup"
-        class="flex flex-col gap-4 flex-1">
+        class="flex flex-col gap-4 flex-1"
+        (ngSubmit)="onSubmit()"
+        >
         <input
             formControlName="name"
             placeholder="Your name"
@@ -19,7 +21,7 @@
             placeholder="How can I help"
             class="p-2"></textarea>
             <div class="flex items-center gap-8">
-              <button class="p-2 bg-black text-white" disabled="true">Get In Touch</button>
+              <button type="submit" class="p-2 bg-black text-white">Get In Touch</button>
               <mat-spinner [diameter]="30"></mat-spinner>
             </div>
     </form>

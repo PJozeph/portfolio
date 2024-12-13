@@ -1,6 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import {
-  Form,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -8,7 +8,6 @@ import {
 } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { EmailService } from '../../services/email.service';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',

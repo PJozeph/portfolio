@@ -1,43 +1,43 @@
 <section class="flex flex-col md:flex-row gap-6 mt-32 mb-32 p-4">
-    <form
-        [formGroup]="contactFormGroup"
-        class="flex flex-col gap-4 flex-1"
-        (ngSubmit)="onSubmit()"
-        >
-        <input
-            formControlName="name"
-            placeholder="Your name"
-            class="p-2" />
-        <input
-            formControlName="email"
-            placeholder="Email"
-            class="p-2" />
-        <input
-            formControlName="website"
-            placeholder="Your website (if exisist)"
-            class="p-2" />
-        <textarea
-            formControlName="message"
-            placeholder="How can I help"
-            class="p-2"></textarea>
-            <div class="flex items-center gap-8">
-              <button type="submit" class="p-2 bg-black text-white">Get In Touch</button>
-              <mat-spinner [diameter]="30"></mat-spinner>
-            </div>
-    </form>
-    <section class="flex flex-col gap-8 place-content-end items-start flex-1">
-        <div class="text-5xl font-extrabold">
-            Lets's
-            <label class="outline-white">talk</label>
-            for Something specaial
-        </div>
-        <div class="text-sm">
-            I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive
-            experiences.
-        </div>
-        <div>
-            <div class="font-bold text-xl">pallagijoe&#64;gmail.com</div>
-            <div class="font-bold text-xl">+3630 635 4914</div>
-        </div>
-    </section>
+  <form
+    [formGroup]="contactFormGroup"
+    class="flex flex-col gap-4 flex-1"
+    (ngSubmit)="onSubmit()"
+  >
+    <input formControlName="name" placeholder="Your name" class="p-2" />
+    <input formControlName="email" placeholder="Email" class="p-2" />
+    <input
+      formControlName="website"
+      placeholder="Your website (if exisist)"
+      class="p-2"
+    />
+    <textarea
+      formControlName="message"
+      placeholder="How can I help"
+      class="p-2"
+    ></textarea>
+    <div
+      class="flex items-center gap-8"
+      [ngClass]="emailIsSent ? 'text-green-500' : 'text-white'"
+    >
+      <button type="submit" class="p-2 bg-black">
+        {{ emailIsSent ? "Email sent successfully" : "Send" }}
+      </button>
+    </div>
+  </form>
+  <section class="flex flex-col gap-8 place-content-end items-start flex-1">
+    <div class="text-5xl font-extrabold">
+      Lets's
+      <label class="outline-white">talk</label>
+      for Something specaial
+    </div>
+    <div class="text-sm">
+      I seek to push the limits of creativity to create high-engaging,
+      user-friendly, and memorable interactive experiences.
+    </div>
+    <div>
+      <div class="font-bold text-xl">pallagijoe&#64;gmail.com</div>
+      <div class="font-bold text-xl">+3630 635 4914</div>
+    </div>
+  </section>
 </section>

@@ -8,10 +8,11 @@ import {
 } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { EmailService } from '../../services/email.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, MatProgressSpinnerModule],
+  imports: [ReactiveFormsModule, MatProgressSpinnerModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.less',
 })
@@ -19,6 +20,8 @@ export class ContactComponent implements OnInit {
   formBuilder = inject(FormBuilder);
 
   contactFormGroup: FormGroup;
+  emailIsSending: boolean = false;
+  emailIsSent: boolean = false;
   private emailService: EmailService = inject(EmailService);
 
   ngOnInit(): void {
@@ -31,10 +34,11 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.emailIsSending = true;
     this.emailService.sendEmail(this.contactFormGroup.value).subscribe(() => {
-      alert('Email sent successfully');
-    }, (error) => {
-        console.error('Error sending email', error);
+      this.emailIsSending = false;
+      this.emailIsSent = true;
+      this.contactFormGroup.reset();
     });
   }
 }

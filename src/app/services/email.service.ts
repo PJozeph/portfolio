@@ -11,7 +11,7 @@ export class EmailService {
   private emailAPI: string = 'send-email';
 
   public sendEmail(emial: Email): Observable<Email> {
-    return this.http.post<any>(
+    return this.http.post<Email>(
       `https://email-service-681005455667.us-central1.run.app/${this.emailAPI}`,
       emial
     );

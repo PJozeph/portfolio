@@ -5,6 +5,7 @@ import {
   FormControl,
   FormGroup,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { EmailService } from '../../services/email.service';
@@ -25,10 +26,13 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.contactFormGroup = this.formBuilder.nonNullable.group({
-      name: new FormControl<string>(''),
-      email: new FormControl<string>(''),
+      name: new FormControl<string>('', Validators.required),
+      email: new FormControl<string>('', [
+        Validators.required,
+        Validators.email,
+      ]),
       website: new FormControl<string>(''),
-      message: new FormControl<string>(''),
+      message: new FormControl<string>('', Validators.required),
     });
   }
 

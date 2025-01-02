@@ -64,4 +64,8 @@ export class AboutMeComponent implements OnInit {
       },
     ]);
   }
+
+  openLink(link: string): void {
+    window.open(link, '_blank');
+  }
 }

@@ -21,7 +21,6 @@ export class AboutMeComponent implements OnInit {
 
   constructor(elementRef: ElementRef) {
     afterRender(() => {
-      elementRef.nativeElement.querySelector('input')?.focus();
       const schema = {
         '@context': 'https://schema.org',
         '@type': 'Person',
